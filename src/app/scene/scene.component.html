@@ -1,2 +1,6 @@
-<p *ngFor="let p of story; let i">{{p}}</p>
+<div id="button-container">
+  <button type="button" id="prev" (click)="prev()">Anterior</button>
+  <button type="button" id="next" (click)="next()">Siguiente</button>
+</div>
+<p *ngFor="let sentence of story; let i=index" [ngClass]="{'selected': i==currentSentence}" >{{sentence}}</p>
 

@@ -7,11 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SceneComponent implements OnInit {
   @Input() story:string[];
-  constructor() {
 
+  public currentSentence:number = 0;
+
+  constructor() {
   }
 
   ngOnInit(): void {
   }
 
+  next(){
+    if(this.currentSentence < (this.story.length - 1)) this.currentSentence++
+  }
+  prev(){
+    if(this.currentSentence > 0) this.currentSentence--
+  }
 }
