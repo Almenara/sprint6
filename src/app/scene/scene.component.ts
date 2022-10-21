@@ -9,6 +9,7 @@ export class SceneComponent implements OnInit {
   @Input() story:string[];
 
   public currentSentence:number = 0;
+  public enterScene:boolean = false;
 
   constructor() {
   }
@@ -21,5 +22,8 @@ export class SceneComponent implements OnInit {
   }
   prev(){
     if(this.currentSentence > 0) this.currentSentence--
+  }
+  showStory(){
+    this.enterScene=true;
   }
 }
