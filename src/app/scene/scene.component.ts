@@ -7,12 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./scene.component.scss']
 })
 export class SceneComponent implements OnInit {
+
   @Input() story:Sentence[];
 
   public currentSentence:number = 0;
   public currentImage:String = "";
   public enterScene:boolean = false;
   public bodyHtml = document.getElementsByTagName('body')[0];
+
 
   constructor() {
   }
